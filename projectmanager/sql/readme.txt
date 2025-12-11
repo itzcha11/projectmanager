@@ -1,0 +1,1 @@
+This was the initial SQL file provided by tutor to create the projects & users, I then expanded.

@@ -1,0 +1,496 @@
+/* ==============================
+   HEADER / TOOLBAR STYLING
+   ============================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;        /* inner spacing */
+    background: #007BFF;
+    color: #fff;
+    border-radius: 8px;       /* slight rounding */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    margin: 0px 0;            /* only vertical spacing, no horizontal */
+    width: calc(100% - 0px);   /* spans almost full width */
+    box-sizing: border-box;
+}
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 20px 0;
+    color: #333;
+}
+
+
+nav.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+}
+
+nav.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+nav.main-nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+nav.user-nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav.user-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.2);
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+nav.user-nav a:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ==============================
+   PROJECT_ADD.PHP FORM STYLING
+   ============================== */
+#projectForm {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#projectForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+#projectForm input,
+#projectForm select,
+#projectForm textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#projectForm textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+#projectForm button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 15px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#projectForm button:hover {
+    background: #0056b3;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.error:empty::before {
+    content: "";  /* Remove asterisk if no message */
+}
+
+.error::before {
+    content: "* "; /* Add asterisk when text exists */
+}
+
+.success-msg {
+    color: #0f5132;
+    background: #d1e7dd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   PROJECT TABLE STYLING (MODERN CLEAN)
+   ============================== */
+table {
+    width: 90%;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    border-collapse: separate;       /* allow rounded corners */
+    border-spacing: 0;
+    border-radius: 10px;             /* table corners */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #ffffff;             /* light background for contrast */
+}
+
+table th, table td {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+table th {
+    background: #0056b3;             /* slightly softer/darker than toolbar */
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95em;
+}
+
+table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;             /* soft alternating rows */
+}
+
+table tr:hover {
+    background: #e8f0fe;             /* subtle hover highlight */
+    transition: background 0.2s;
+}
+
+table td {
+    border-bottom: 1px solid #ddd;   /* subtle row separation */
+}
+
+table td:last-child {
+    text-align: center;               /* center the "View" link */
+}
+
+table a {
+    color: #007BFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* ==============================
+   SEARCH FORM STYLING
+   ============================== */
+form.search-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 20px auto; /* center and add space below */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+form.search-form input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form.search-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form.search-form button:hover {
+    background: #0056b3;
+}
+
+/* No results message styling */
+.no-results {
+    display: block;                  /* take full line */
+    width: fit-content;              /* shrink to text width */
+    margin: 10px auto;               /* center horizontally under search box */
+    background: #f8d7da;             /* pastel red */
+    color: #842029;                  /* darker red text */
+    padding: 8px 12px;               /* padding around text */
+    border-radius: 6px;              /* rounded corners */
+    text-align: center;              /* center text */
+    font-weight: bold;
+}
+
+
+
+/* ==============================
+   Project view card
+   ============================== */
+.project-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    text-align: center;                /* center all content */
+}
+
+.project-card h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-size: 1.6em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.project-card p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.project-card p strong {
+    display: inline;                   /* remove fixed width */
+    color: #0056b3;                    /* blue label */
+    margin-right: 5px;                 /* small spacing after label */
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.project-card a:hover {
+    background: #0056b3;
+}
+
+/* ==============================
+   Form card styling (register / login)
+   ============================== */
+.form-card {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.form-card h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-size: 1.6em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.form-card p.message {
+    margin-bottom: 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.form-card p.message.success {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.form-card p.message.error {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-card label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Highlight input with error */
+.form-card input.error {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220,53,69,0.5);
+}
+
+/* Highlight input with success */
+.form-card input.valid {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40,167,69,0.4);
+}
+
+/* Button styling */
+.form-card button {
+    padding: 10px 15px;
+    font-size: 15px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.form-card button:hover {
+    background: #0056b3;
+}
+
+/* Info text (gray by default) */
+.form-card small.form-info {
+    display: block;
+    text-align: left;
+    color: #6c757d;        /* subtle gray */
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Info text turns green when valid */
+.form-card small.form-info.valid {
+    color: #28a745;        /* green for success */
+}
+
+/* Error message text */
+.form-card small.error-msg {
+    display: block;
+    color: #dc3545;      /* red color */
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+
+
+/* ==============================
+   Edit project
+   ============================== */
+p.message {
+    width: fit-content;
+    margin: 0 auto 15px auto;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.message.success {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+p.message.error {
+    background: #f8d7da;
+    color: #842029;
+}
+
+
+/* ==============================
+   Layout & Footer
+   ============================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1; /* take up remaining space, pushing footer to bottom */
+    padding: 20px; /* optional, so content isn't stuck to top */
+}
+
+/* Footer styles */
+.site-footer {
+    background: #0b3d91; /* dark blue */
+    color: #fff;
+    width: 100%;
+    border-radius: 10px 10px 0 0; /* rounded top corners */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* subtle shadow above */
+}
+
+.site-footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4px 15px; /* smaller padding for thinner footer */
+    font-size: 13px; /* smaller text */
+    box-sizing: border-box;
+}
